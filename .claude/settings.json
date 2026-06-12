@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@anthropic/mcp-server-playwright"]
+    }
+  },
+  "hooks": {
+    "StartSession": [
+      {
+        "matcher": "",
+        "command": "cat .claude/memory/quality-vision.md .workspace/coding-standards.md 2>/dev/null | head -80"
+      }
+    ]
+  }
+}
